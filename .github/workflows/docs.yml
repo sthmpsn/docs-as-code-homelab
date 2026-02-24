@@ -27,7 +27,10 @@ jobs:
           version: '2.26.0' # pin stable version
 
       - name: Lint Markdown
-        run: vale docs/
+        uses: errata-ai/vale-action@v2
+        with:
+          files: "docs/**/*.md"
+          version: "2.26.0"  # pin a known stable version
 
       - name: Validate OpenAPI
         run: openapi-spec-validator openapi.yaml
