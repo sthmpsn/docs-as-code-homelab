@@ -22,10 +22,9 @@ jobs:
           pip install mkdocs mkdocs-material openapi-spec-validator
 
       - name: Install Vale
-        run: |
-          curl -L https://github.com/errata-ai/vale/releases/latest/download/vale_Linux_64-bit.tar.gz -o vale.tar.gz
-          tar -xzf vale.tar.gz
-          sudo mv vale /usr/local/bin/
+        uses: errata-ai/vale-action@v2
+        with:
+          version: '2.26.0' # pin stable version
 
       - name: Lint Markdown
         run: vale docs/
