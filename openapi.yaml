@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info:
+  title: Homelab API
+  version: 1.0.0
+
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: OK
+
+  /users:
+    get:
+      summary: Get users
+      responses:
+        '200':
+          description: User list
+    post:
+      summary: Create user
+      responses:
+        '200':
+          description: User created
+
+  /version:
+    get:
+      summary: Get version
+      responses:
+        '200':
+          description: API version

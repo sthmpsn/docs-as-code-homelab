@@ -1,0 +1,8 @@
+site_name: Docs as Code Homelab
+site_description: Node API Documentation Lab
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - API: api.md
